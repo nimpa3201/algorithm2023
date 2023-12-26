@@ -1,0 +1,13 @@
+s = input()
+max=0
+def palidrome(s):
+    if s == s[::-1]:
+        return True
+
+
+for i in range(len(s)):
+    for j in range(i,len(s)+1):
+        if palidrome(s[i:j]):
+            if max < len(s[i:j]):
+                max = len(s[i:j])
+print(max)
